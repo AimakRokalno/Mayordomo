@@ -1,5 +1,5 @@
-﻿//+------------------------------------------------------------------+
-//|                                             ea_Mayordomo_2.1.mq4 |
+﻿//+-----------------------------------------------------------------+
+//|	   		                                        ea_Mayordomo.mq4 |
 //|                                          mashup by Aimak Rokalno |
 //+------------------------------------------------------------------+
 /*
@@ -32,7 +32,7 @@ Version 1.0
 */
 #property copyright	"Aimak Rokalno en AimakLand "
 #property link		"http://www.aimak.com"
-#property version		"1.0" 
+#property version	"1.0" 
 
 #property description "EA capacitado para intereactuar en grupo o canal de Telegram."
 #property description "Detalles en https://www.mql5.com/en/articles/2355"
@@ -41,18 +41,18 @@ Version 1.0
 #include "Telegram.mqh"		// Necesario para que funcione enviar mensajes a Telegram
 
 //--- Input parameters
-input string 	aaa			= "====== CONF del bot de Telegram ========";		// =================
-input int 	 	FreqMensajes	= 3600; 								// Segundos entre acualizaciones periódicas
-input string 	MsgTitle		= "Mayordomo Test Bot";						// Titulo de los mensajes del bot
-input bool		volcado 		= TRUE;								// Activa volcado de info al registro
-input bool		usarTelegrm		= TRUE;								// Activa enviar mensages a Telegram
+input string 	aaa				= "====== CONF del bot de Telegram ========";	// =================
+input int 	 	FreqMensajes	= 3600; 										// Segundos entre acualizaciones periódicas
+input string 	MsgTitle		= "Mayordomo Test Bot";							// Titulo de los mensajes del bot
+input bool		volcado 		= TRUE;											// Activa volcado de info al registro
+input bool		usarTelegrm		= TRUE;											// Activa enviar mensages a Telegram
 
 // definimos myChat_id como Long para utilizar el chat_id numérico. Cambiar a String para usar el nombre del canal/grupo
 input long 		myChat_id		= -269973047;							// ID del canal
 input string 	myBotToken		= "448849024:AAHRja6QLIcYJCYcKBHgS8bMWe-fHsliqHM";	// Token del bot
 
-input string 	bbb			= "========= Funciones Adicionales =========";		// === Funciones Adicionales
-sinput int		MaxIntentosColocacion		= 3;							// Número de intentos para cerrar un trade
+input string 	bbb	= "========= Funciones Adicionales =========";		// === Funciones Adicionales
+sinput int		MaxIntentosColocacion	= 3;							// Número de intentos para cerrar un trade
 
 
 //--- Global variables
